@@ -1,6 +1,7 @@
 @echo off
 title Forensic Information Scanner(creatred by OxideDevX)
 color a
+echo HI!
 echo ############################################################
 echo ####                                                    ####
 echo #######    Forensic  Information Scanner             #######   
@@ -14,7 +15,7 @@ whoami /priv >> %COMPUTERNAME%-IS.txt
 echo %username% >> %COMPUTERNAME%-IS.txt
 net user >> %COMPUTERNAME%-IS.txt
 cmdkey /list >> %COMPUTERNAME%-IS.txt
-:: user
+:: user part          
 systeminfo >> %COMPUTERNAME%-IS.txt
 getmac >> %COMPUTERNAME%-IS.txt
 dir C:\ >> %COMPUTERNAME%-IS.txt
@@ -26,7 +27,7 @@ dir C:\"Program Files (x86)" >> %COMPUTERNAME%-IS.txt
 tasklist >> %COMPUTERNAME%-IS.txt
 wmic startup list full >> %COMPUTERNAME%-IS.txt
 
-::Network 
+::Network part
 ipconfig /all >> %COMPUTERNAME%-IS.txt
 netstat -ao >> %COMPUTERNAME%-IS.txt
 net view >> %COMPUTERNAME%-IS.txt
