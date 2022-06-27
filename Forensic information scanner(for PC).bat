@@ -1,6 +1,6 @@
 @echo off
 title Forensic Information Scanner(creatred by OxideDevX)
-color a
+color 8a
 echo HI!
 echo ############################################################
 echo ####                                                    ####
