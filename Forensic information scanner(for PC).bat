@@ -15,6 +15,7 @@ whoami /priv >> %COMPUTERNAME%-IS.txt
 echo %username% >> %COMPUTERNAME%-IS.txt
 net user >> %COMPUTERNAME%-IS.txt
 cmdkey /list >> %COMPUTERNAME%-IS.txt
+doskey /history >>%COMPUTERNAME%-IS.txt
 :: user part          
 systeminfo >> %COMPUTERNAME%-IS.txt
 getmac >> %COMPUTERNAME%-IS.txt
@@ -24,6 +25,12 @@ dir F:\ >> %COMPUTERNAME%-IS.txt
 dir C:\Users >> %COMPUTERNAME%-IS.txt
 dir C:\"Program Files" >> %COMPUTERNAME%-IS.txt
 dir C:\"Program Files (x86)" >> %COMPUTERNAME%-IS.txt
+dir C:\Users >>%COMPUTERNAME%-IS.txt
+tree c:\ /f | more >> %COMPUTERNAME%-IS.txt
+tree e:\ /f | more >> %COMPUTERNAME%-IS.txt
+tree f:\ /f | more >> %COMPUTERNAME%-IS.txt
+tree d:\ /f | more >> %COMPUTERNAME%-IS.txt
+tree a:\ /f | more >> %COMPUTERNAME%-IS.txt
 tasklist >> %COMPUTERNAME%-IS.txt
 wmic startup list full >> %COMPUTERNAME%-IS.txt
 
