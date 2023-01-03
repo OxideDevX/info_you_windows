@@ -1,6 +1,5 @@
 @echo off
-title Forensic Information Scanner(creatred by OxideDevX) for system administratot and cybersecurity specialist , for forensic.
-color 8a
+title Forensic Information Scanner(creatred by OxideDevX)
 echo ############################################################
 echo ####                                                    ####
 echo #######    Forensic  Information Scanner             #######   
@@ -20,7 +19,6 @@ doskey /history >>%COMPUTERNAME%-IS.txt
 :: user part
 
 systeminfo >> %COMPUTERNAME%-IS.txt
-getmac >> %COMPUTERNAME%-IS.txt
 dir C:\ >> %COMPUTERNAME%-IS.txt
 dir E:\ >> %COMPUTERNAME%-IS.txt
 dir F:\ >> %COMPUTERNAME%-IS.txt
@@ -35,9 +33,11 @@ tree d:\ /f | more >> %COMPUTERNAME%-IS.txt
 tree a:\ /f | more >> %COMPUTERNAME%-IS.txt
 tasklist >> %COMPUTERNAME%-IS.txt
 wmic startup list full >> %COMPUTERNAME%-IS.txt
-::Network 
+
+::Network part
 
 ipconfig /all >> %COMPUTERNAME%-IS.txt
+getmac >> %COMPUTERNAME%-IS.txt
 netsh lan show interfaces >> %COMPUTERNAME%-IS.txt
 netsh wlan show networks mode=bssid >> %COMPUTERNAME%-IS.txt
 netsh wlan show profiles >> %COMPUTERNAME%-IS.txt
@@ -46,6 +46,6 @@ netstat -ao >> %COMPUTERNAME%-IS.txt
 net view >> %COMPUTERNAME%-IS.txt
 arp -a >> %COMPUTERNAME%-IS.txt
 
-::Software Information
+::Software Information part
 wmic product get /format:csv > %COMPUTERNAME%-IS.csv
 exit
